@@ -1,12 +1,14 @@
-<img width="1356" height="883" alt="image" src="https://github.com/user-attachments/assets/f6d12674-1ab5-4112-b7e8-05acd2cb9a8d" /># ScamSaathi 🛡️
+# ScamSaathi 🛡️
 
 **ScamSaathi** is an AI-powered scam-awareness prototype that analyzes user-provided audio recordings for suspicious conversation patterns and provides evidence-based safety guidance.
 
 🌐 **Live demo:** https://scamsaathi.web.app/audio-test
 
-> **Important:** ScamSaathi is an awareness aid, not an official fraud-verification service. AI results can be incorrect. A low-risk result does not guarantee that a call is safe.
+**Important:** ScamSaathi is an awareness aid, not an official fraud-verification service. AI results can be incorrect. A low-risk result does not guarantee that a call is safe.
 
 Screenshot:
+<img width="1356" height="883" alt="image" src="https://github.com/user-attachments/assets/f6d12674-1ab5-4112-b7e8-05acd2cb9a8d" />
+
 <img width="1728" height="1044" alt="image" src="https://github.com/user-attachments/assets/1c92e979-9051-4def-96cd-852d993d3f8a" />
 
 <img width="1728" height="1044" alt="image" src="https://github.com/user-attachments/assets/59e7edf2-72b8-41ab-864e-a377328ff02d" />
