@@ -67,6 +67,7 @@ export default function AudioTest() {
   const [dragging, setDragging] = useState(false);
   const [progressMessage, setProgressMessage] = useState("Preparing your recording…");
   const [audioUrl, setAudioUrl] = useState("");
+  const [demoLoading, setDemoLoading] = useState(false);
 
   useEffect(() => {
     if (!file) {
@@ -115,8 +116,33 @@ export default function AudioTest() {
     }
   }
 
+  async function loadDemoRecording() {
+    if (loading || demoLoading) return;
+    setDemoLoading(true);
+    setError("");
+    setResult(null);
+    try {
+      const response = await fetch("/ai-voice.wav");
+      if (!response.ok) {
+        throw new Error("The demo recording could not be loaded. Confirm public/ai-voice.wav exists, then restart the dev server.");
+      }
+      const blob = await response.blob();
+      const demoFile = new File([blob], "ai-voice.wav", {
+        type: blob.type || "audio/wav",
+        lastModified: Date.now(),
+      });
+      const validationError = validateSelectedFile(demoFile);
+      if (validationError) throw new Error(validationError);
+      setFile(demoFile);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not load the demo recording.");
+    } finally {
+      setDemoLoading(false);
+    }
+  }
+
   function reset() {
-    if (loading) return;
+    if (loading || demoLoading) return;
     setFile(null);
     setResult(null);
     setError("");
@@ -187,8 +213,16 @@ export default function AudioTest() {
                 aria-describedby="audio-help"
               />
             </label>
+            <button
+              type="button"
+              onClick={loadDemoRecording}
+              disabled={loading || demoLoading}
+              className="mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-cyan-300/25 bg-cyan-300/[0.06] px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/50 hover:bg-cyan-300/[0.1] focus:outline-none focus:ring-2 focus:ring-cyan-200 focus:ring-offset-2 focus:ring-offset-slate-950 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {demoLoading ? <><LoaderCircle size={16} className="animate-spin" aria-hidden="true" /> Loading demo…</> : <><AudioLines size={16} aria-hidden="true" /> Try demo recording (WAV)</>}
+            </button>
             <p id="audio-help" className="mt-2 text-xs leading-5 text-slate-500">
-              Use a recording you have permission to analyze. Avoid uploading private conversations or recordings containing unnecessary personal information.
+              Use the built-in sample for a quick demo, or upload a recording you have permission to analyze. Avoid uploading private conversations or recordings containing unnecessary personal information.
             </p>
 
             {file && (
