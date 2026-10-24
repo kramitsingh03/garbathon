@@ -1,10 +1,34 @@
-# ScamSaathi 🛡️
+<img width="1356" height="883" alt="image" src="https://github.com/user-attachments/assets/f6d12674-1ab5-4112-b7e8-05acd2cb9a8d" /># ScamSaathi 🛡️
 
 **ScamSaathi** is an AI-powered scam-awareness prototype that analyzes user-provided audio recordings for suspicious conversation patterns and provides evidence-based safety guidance.
 
 🌐 **Live demo:** https://scamsaathi.web.app/audio-test
 
 > **Important:** ScamSaathi is an awareness aid, not an official fraud-verification service. AI results can be incorrect. A low-risk result does not guarantee that a call is safe.
+
+Screenshot:
+<img width="1728" height="1044" alt="image" src="https://github.com/user-attachments/assets/1c92e979-9051-4def-96cd-852d993d3f8a" />
+
+<img width="1728" height="1044" alt="image" src="https://github.com/user-attachments/assets/59e7edf2-72b8-41ab-864e-a377328ff02d" />
+
+<img width="1728" height="989" alt="image" src="https://github.com/user-attachments/assets/b6201f4a-9d6e-4cbe-af4e-ccbbe13d6fa3" />
+
+<img width="1728" height="989" alt="image" src="https://github.com/user-attachments/assets/d146daf3-c2dd-4447-b327-1bd43ccb5c16" />
+
+<img width="1728" height="989" alt="image" src="https://github.com/user-attachments/assets/b1926314-41b7-47c4-be17-5dff3d3f3aa2" />
+
+<img width="1728" height="989" alt="image" src="https://github.com/user-attachments/assets/8739bb2a-9ef8-477f-a97e-cf881a914027" />
+
+<img width="1728" height="989" alt="image" src="https://github.com/user-attachments/assets/83c706c6-595c-48b4-a8ef-b4239adf129a" />
+
+<img width="1728" height="989" alt="image" src="https://github.com/user-attachments/assets/82ddd520-ae86-4ec0-a78e-80ad2f6e4588" />
+
+<img width="1728" height="989" alt="image" src="https://github.com/user-attachments/assets/170de1e7-8661-4431-8f10-3fa9a84ccf54" />
+
+
+<img width="1728" height="989" alt="image" src="https://github.com/user-attachments/assets/82cba59b-7934-444e-8526-b01237c7a563" />
+
+<img width="1728" height="989" alt="image" src="https://github.com/user-attachments/assets/530decb6-ad38-42b5-beee-30f29ed4574d" />
 
 ## Why ScamSaathi?
 
